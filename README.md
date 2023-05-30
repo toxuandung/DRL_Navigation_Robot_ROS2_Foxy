@@ -4,5 +4,5 @@
 Training environment :
 
 <p align="center">
-    <img width=60% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_env.png">
+    <img width=40% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_env.png">
 </p>
