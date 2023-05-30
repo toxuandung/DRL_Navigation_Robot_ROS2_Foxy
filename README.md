@@ -13,6 +13,9 @@ Robot state :
 - Angular Velocity
 - Distance to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR (Light Detection and Ranging) sensor
 
+Reward :
+
+(■(U(t)@V(t)@W(t) ))=(■(1&0&0@0&cos⁡Rt&-sin⁡Rt@0&sin⁡Rt&cos⁡Rt ))(■(U(0)@V(0)@W(0) ))
 
 Training environment :
 
