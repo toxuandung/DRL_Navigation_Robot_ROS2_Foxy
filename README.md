@@ -15,7 +15,7 @@ Robot state :
 
 Reward :
 
-(■(U(t)@V(t)@W(t) ))=(■(1&0&0@0&cos⁡Rt&-sin⁡Rt@0&sin⁡Rt&cos⁡Rt ))(■(U(0)@V(0)@W(0) ))
+A=πr^2
 
 Training environment :
 
