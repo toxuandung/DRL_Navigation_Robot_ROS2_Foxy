@@ -18,7 +18,7 @@ Robot state :
 
 Reward :
 
-A=πr^2
+r = v - |ω|
 
 Training environment :
 
