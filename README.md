@@ -19,10 +19,13 @@ Robot state :
 Reward :
 
 if target:
+
     r = 100
 elif collision:
+
     r = -100.0
 else:
+
     r = v - |ω| - r3
 
 Training environment :
