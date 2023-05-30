@@ -6,3 +6,11 @@ Training environment :
 <p align="center">
     <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_env.png">
 </p>
+
+
+## Installation
+Main dependencies: 
+
+* [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
+* [PyTorch](https://pytorch.org/get-started/locally/)
+* [Tensorboard](https://github.com/tensorflow/tensorboard)
