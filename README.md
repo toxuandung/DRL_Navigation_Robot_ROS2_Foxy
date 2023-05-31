@@ -11,24 +11,13 @@ TD3 is an actor-critic type of network similar to DDPG. That means that there is
 
 The Robot and The Evironment :
 
-Before we start the actual motion policy training of a mobile robot, we must first understand the task that we are trying to solve. To put it in human language, we are trying to “find the optimal sequence of actions that lead the robot to a given goal”. But how do we form this problem into something that a computer can understand and execute? There are two things to consider — the action and the environment that the action reacts to. In a mobile robot setting, it is quite easy to express the action in a mathematical form. It is the force applied to each actuator for the controllable degree of freedom. To put it simply, it is how much we want to move in any controllable direction.
+We are trying to "find the optimal sequence of actions that lead the robot to a given goal”. There are two things to consider — the action and the environment that the action reacts to. In a mobile robot setting, it is quite easy to express the action in a mathematical form. It is the force applied to each actuator for the controllable degree of freedom. To put it simply, it is how much we want to move in any controllable direction.
 
     a = (v, ω)
-    s = (laser_state + polar_goal_coordinates + previous_action)
+    s = (laser_state + distance_to_goal + theta + previous_action)
     
-    
-- Distance to goal
-- Angles between the robot heading and the heading towards the goal
-- Translational Velocity
-- Angular Velocity
-- Distance to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR sensor
-
-Action and State:
-
-
-
-a is tuple action, v is the linear velocity, and ω is the angular velocity.
-
+- a is tuple action , v is translational velocity, ω is angular velocity
+- s is state, laser_state are sistance to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR sensor, theta is angles between the robot heading and the heading towards the goal
 
 Reward :
 
