@@ -16,9 +16,13 @@ Robot state :
 - Angular Velocity
 - Distance to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR sensor
 
-Action :
+Action and State:
 
     a = (v, ω)
+    s = (laser_state + polar_goal_coordinates + previous_action)
+
+a is tuple action, v is the linear velocity, and ω is the angular velocity.
+
 
 Reward :
 
