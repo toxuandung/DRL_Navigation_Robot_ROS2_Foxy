@@ -43,6 +43,16 @@ Training environment :
 ## Installation
 Main dependencies: 
 
-* [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
 * [PyTorch](https://pytorch.org/get-started/locally/)
 * [Tensorboard](https://github.com/tensorflow/tensorboard)
+* [ROS2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
+
+```shell
+$ sudo apt install python3-colcon-common-extensions
+$ sudo apt install ros-foxy-gazebo-ros-pkgs
+$ sudo apt install ros-foxy-xacro
+```
+```shell
+### Clone this repo
+$ git clone https://github.com/reiniscimurs/DRL-robot-navigation
+```
