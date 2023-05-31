@@ -85,6 +85,6 @@ Test environment :
 Test example :
 
 <p align="center">
-    <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_example.gif">
+    <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.gif">
 </p>
 
