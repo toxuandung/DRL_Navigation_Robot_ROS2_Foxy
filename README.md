@@ -56,4 +56,20 @@ Clone the repository :
 
 ```shell
 $ git clone https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy.git
+$ cd DRL_Navigation_Robot_ROS2_Foxy
 ```
+Compile the workspace:
+
+```shell
+$ source /opt/ros/foxy/setup.bash
+$ colcon build
+$ colcon build source install/setup.bash
+```
+
+
+
+
+
+
+
+
