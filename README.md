@@ -67,7 +67,9 @@ $ source install/setup.bash
 ```
 Training :
 
-
+<p align="center">
+    <img width=100% src="https://github.com/reiniscimurs/DRL-robot-navigation/blob/main/training.gif">
+</p>
 
 
 
