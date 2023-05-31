@@ -530,7 +530,7 @@ if __name__ == '__main__':
     episode_get_goal = 0
     episode_get_collision = 0
     episode_get_timeout = 0
-
+    test_accuracy = 0
     # Create the testing environment
     env = GazeboEnv()
     odom_subscriber = Odom_subscriber()
@@ -561,20 +561,25 @@ if __name__ == '__main__':
             done = False
             episode_timesteps = 0
 
-            if finish_episode_reward == 100 :
+            if finish_episode_reward == 100 :               
                 episode_get_goal= episode_get_goal + 1
                 episode_test = episode_test + 1
+                test_accuracy = episode_get_goal/episode_test
             if finish_episode_reward == -100 :
                 episode_get_collision = episode_get_collision + 1 
                 episode_test = episode_test + 1               
+                test_accuracy = episode_get_goal/episode_test
 
             env.get_logger().info(f"goal : {episode_get_goal}")
             env.get_logger().info(f"collision : {episode_get_collision}")
             env.get_logger().info(f"episode : {episode_test}")
+            env.get_logger().info(f"accuracy : {test_accuracy}")
 
-            writer.add_scalar("Get Goal", episode_get_goal , episode_test)
-            writer.add_scalar("Get Collision ", episode_get_collision, episode_test)
-            # writer.add_scalar("Get Timeout", episode_get_timeout, episode_test)
+            writer.add_scalar("accuracy", test_accuracy , episode_test)
+
+            # writer.add_scalar("Get Goal", episode_get_goal , episode_test)
+            # writer.add_scalar("Get Collision ", episode_get_collision, episode_test)
+
 
         else:
             action = network.get_action(np.array(state))
@@ -583,7 +588,6 @@ if __name__ == '__main__':
             next_state, reward, done, target = env.step(a_in)
             finish_episode_reward = reward 
             done = 1 if episode_timesteps + 1 == max_ep else int(done)
-            # episode_get_timeout =+ 1 if episode_timesteps + 1 == max_ep else int(episode_get_timeout)
             state = next_state
             episode_timesteps += 1
 
