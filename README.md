@@ -65,7 +65,10 @@ $ source /opt/ros/foxy/setup.bash
 $ colcon build
 $ source install/setup.bash
 ```
-
+Training :
+<p align="center">
+    <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/assets/101309710/484631fb-669f-44b5-8c6d-b9e7d1db250e">
+</p> 
 
 
 
