@@ -9,10 +9,11 @@ TD3 is an actor-critic type of network similar to DDPG. That means that there is
     <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/assets/101309710/484631fb-669f-44b5-8c6d-b9e7d1db250e">
 </p> 
 
-<p align="center">
-    <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png">,<img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png">
-</p> 
-![alt-text-1]([image1.png](https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png) "title-1") ![alt-text-2]([image2.png](https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png) "title-2")
+<p float="left">
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="100" />
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="100" /> 
+
+</p>
 
 The Robot and The Evironment :
 
