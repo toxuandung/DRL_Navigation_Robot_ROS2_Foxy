@@ -52,7 +52,8 @@ $ sudo apt install python3-colcon-common-extensions
 $ sudo apt install ros-foxy-gazebo-ros-pkgs
 $ sudo apt install ros-foxy-xacro
 ```
+Clone the repository :
+
 ```shell
-### Clone this repo
-$ git clone https://github.com/reiniscimurs/DRL-robot-navigation
+$ git clone https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy.git
 ```
