@@ -31,7 +31,7 @@ else:
 
     r = v - |ω| - r3  // r3 = (1 - smallest distance of robot to obstacles) if that distance < 1m else r3 = 0
     
-r is the reward,
+r is the reward for each time step,
 The idea behind it is that the robot needs to realize that it should be moving around and not just sitting in a single spot. By setting a positive reward for linear motion robot first learns that moving forward is good and rotating is not.Additionally, we add the term r3 which is calculated by our lambda function. This gives an additional negative reward if the robot is closer to any obstacle than 1 meter.
 
 Training environment :
