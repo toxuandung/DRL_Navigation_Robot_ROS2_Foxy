@@ -69,7 +69,7 @@ Training :
 ```shell
 $ ros2 launch td3 training_simulation.launch.py
 ```
-ros2 launch td3 training_simulation.launch.py
+Training example :
 
 <p align="center">
     <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_example.gif">
