@@ -17,7 +17,7 @@ We are trying to "find the optimal sequence of actions that lead the robot to a 
     s = (laser_state + distance_to_goal + theta + previous_action)
     
 - a is tuple action , v is translational velocity, ω is angular velocity
-- s is state, laser_state are sistance to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR sensor, theta is angles between the robot heading and the heading towards the goal
+- s is state, laser_state are distances to an obstacle at each 9-degree interval within a 180-degree range in front of a robot from LIDAR sensor, theta is angles between the robot heading and the heading towards the goal
 
 Reward :
 
