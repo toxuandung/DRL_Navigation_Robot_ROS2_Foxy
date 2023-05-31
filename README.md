@@ -78,8 +78,8 @@ Training example :
 Test environment :
 
 <p float="left">
-  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="500" /> 
-  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env2.png" width="500" /> 
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="400" /> 
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env2.png" width="400" /> 
 </p>
 
 Test example :
