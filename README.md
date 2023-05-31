@@ -69,12 +69,21 @@ Training :
 ```shell
 $ ros2 launch td3 training_simulation.launch.py
 ```
+monitor the training process by tensorboard. Open the new terminal:
+
+```shell
+$ tensorboard dev upload --logdir     './src/td3/runs/train/tensorboard'
+```
 Training example :
 
 <p align="center">
     <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_example.gif">
 </p>
 
+Testing :
+```shell
+$ ros2 launch td3 test_simulation.launch.py
+```
 Test example :
 
 <p align="center">
