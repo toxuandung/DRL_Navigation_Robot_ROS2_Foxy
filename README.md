@@ -30,6 +30,7 @@ else:
     
 r is the reward, where v is the linear velocity, and ω is the angular velocity.
 The idea behind it is that the robot needs to realize that it should be moving around and not just sitting in a single spot. By setting a positive reward for linear motion robot first learns that moving forward is good and rotating is not.Additionally, we add the term r3 which is calculated by our lambda function. This gives an additional negative reward if the robot is closer to any obstacle than 1 meter.
+
 Training environment :
 
 <p align="center">
