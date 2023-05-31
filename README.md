@@ -75,7 +75,7 @@ monitor the training process by tensorboard. Open the new terminal:
 $ tensorboard dev upload --logdir     './src/td3/runs/train/tensorboard'
 ```
 <p align="center">
-    <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/ensorboard.PNG">
+    <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Tensorboard.PNG">
 </p>
 
 Training example :
