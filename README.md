@@ -40,12 +40,6 @@ Training environment :
     <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_env.png">
 </p>
 
-<p float="left">
-  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="300" />
- 
- 
-  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="300" /> 
-</p>
 ## Installation
 Main dependencies: 
 
@@ -81,6 +75,11 @@ Training example :
     <img width=70% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Training_example.gif">
 </p>
 
+Test environment :
 
+<p float="left">
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="300" /> 
+  <img src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Test_env1.png" width="300" /> 
+</p>
 
 
