@@ -63,7 +63,7 @@ Compile the workspace:
 ```shell
 $ source /opt/ros/foxy/setup.bash
 $ colcon build
-$ colcon build source install/setup.bash
+$ source install/setup.bash
 ```
 
 
