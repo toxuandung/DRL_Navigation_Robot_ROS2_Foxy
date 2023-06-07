@@ -10,8 +10,17 @@ TD3 is an actor-critic type of network similar to DDPG. That means that there is
 </p> 
 
 <p align="center">
-    <img width=60% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Actor.png">
+    <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Actor.png">
 </p> 
+
+<p align="center">
+    <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Critic.png">
+</p> 
+
+<p align="center">
+    <img width=50% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Td3.png">
+</p> 
+
 The Robot and The Evironment :
 
 We are trying to "find the optimal sequence of actions that lead the robot to a given goal”. There are two things to consider — the action and the environment that the action reacts to. In a mobile robot setting, it is quite easy to express the action in a mathematical form. It is the force applied to each actuator for the controllable degree of freedom. To put it simply, it is how much we want to move in any controllable direction.
