@@ -10,7 +10,7 @@ TD3 is an actor-critic type of network similar to DDPG. That means that there is
 </p> 
 
 <p align="center">
-    <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Actor.png">
+    <img width=40% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Actor.png">
 </p> 
 The Robot and The Evironment :
 
