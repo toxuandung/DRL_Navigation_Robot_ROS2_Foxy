@@ -55,7 +55,6 @@ class Critic(nn.Module):
         q2 = self.layer_6(s2)
         return q1, q2
 
-# td3 network
 class td3(object):
     def __init__(self, state_dim, action_dim, max_action):
         # Initialize the Actor network
@@ -96,7 +95,6 @@ class td3(object):
     <img width=90% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/blob/main/Td3.png">
 </p>  -->
 
-The detail of the network can be found in src/td3/scripts
 
 The Robot and The Evironment :
 
