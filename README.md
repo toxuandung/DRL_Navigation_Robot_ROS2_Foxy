@@ -7,6 +7,18 @@ TD3 Network Implementation :
 
 TD3 is an actor-critic type of network similar to DDPG. That means that there is an “actor” network that calculates an action to perform, and a “critic” network, that estimates, how good is this action. In a simple form, TD3 architecture is an extension of DDPG architecture to solve the problem of overestimating the Q-value. It does so by introducing a second critic network within the loop and selecting the output from the one that produces the lower Q-value estimations. (Once again, a mathematical and algorithmic background overview can be obtained here.) Therefore, we need to create an actor-network that will take the environmental state as input and output action for the robot to take. Also, we need to create two critic networks that will take the environmental state as well as the action from the actor-network as inputs and will output the estimated value of this state-action pair.
 
+class Actor(nn.Module):
+    def __init__(self, state_dim, action_dim):
+        super(Actor, self).__init__()
+        self.layer_1 = nn.Linear(state_dim, 800)
+        self.layer_2 = nn.Linear(800, 600)
+        self.layer_3 = nn.Linear(600, action_dim)
+        self.tanh = nn.Tanh()
+    def forward(self, s):
+        s = F.relu(self.layer_1(s))
+        s = F.relu(self.layer_2(s))
+        a = self.tanh(self.layer_3(s))
+        return a
 <!-- <p align="center">
     <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/assets/101309710/484631fb-669f-44b5-8c6d-b9e7d1db250e">
 </p> 
