@@ -57,13 +57,11 @@ class Critic(nn.Module):
 
 class td3(object):
     def __init__(self, state_dim, action_dim, max_action):
-        # Initialize the Actor network
         self.actor = Actor(state_dim, action_dim).to(device)
         self.actor_target = Actor(state_dim, action_dim).to(device)
         self.actor_target.load_state_dict(self.actor.state_dict())
         self.actor_optimizer = torch.optim.Adam(self.actor.parameters())
 
-        # Initialize the Critic networks
         self.critic = Critic(state_dim, action_dim).to(device)
         self.critic_target = Critic(state_dim, action_dim).to(device)
         self.critic_target.load_state_dict(self.critic.state_dict())
