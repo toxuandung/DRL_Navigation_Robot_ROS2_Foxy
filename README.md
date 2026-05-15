@@ -8,19 +8,62 @@ TD3 Network Implementation :
 TD3 is an actor-critic type of network similar to DDPG. That means that there is an “actor” network that calculates an action to perform, and a “critic” network, that estimates, how good is this action. In a simple form, TD3 architecture is an extension of DDPG architecture to solve the problem of overestimating the Q-value. It does so by introducing a second critic network within the loop and selecting the output from the one that produces the lower Q-value estimations. (Once again, a mathematical and algorithmic background overview can be obtained here.) Therefore, we need to create an actor-network that will take the environmental state as input and output action for the robot to take. Also, we need to create two critic networks that will take the environmental state as well as the action from the actor-network as inputs and will output the estimated value of this state-action pair.
 
 ```python
-class Actor(nn.Module):
+class Critic(nn.Module):
     def __init__(self, state_dim, action_dim):
-        super(Actor, self).__init__()
-        self.layer_1 = nn.Linear(state_dim, 800)
-        self.layer_2 = nn.Linear(800, 600)
-        self.layer_3 = nn.Linear(600, action_dim)
-        self.tanh = nn.Tanh()
+        super(Critic, self).__init__()
 
-    def forward(self, s):
-        s = F.relu(self.layer_1(s))
-        s = F.relu(self.layer_2(s))
-        a = self.tanh(self.layer_3(s))
-        return a
+        self.layer_1 = nn.Linear(state_dim, 800)
+        self.layer_2_s = nn.Linear(800, 600)
+        self.layer_2_a = nn.Linear(action_dim, 600)
+        self.layer_3 = nn.Linear(600, 1)
+
+        self.layer_4 = nn.Linear(state_dim, 800)
+        self.layer_5_s = nn.Linear(800, 600)
+        self.layer_5_a = nn.Linear(action_dim, 600)
+        self.layer_6 = nn.Linear(600, 1)
+
+    def forward(self, s, a):
+        s1 = F.relu(self.layer_1(s))
+        self.layer_2_s(s1)
+        self.layer_2_a(a)
+        s11 = torch.mm(s1, self.layer_2_s.weight.data.t())
+        s12 = torch.mm(a, self.layer_2_a.weight.data.t())
+        s1 = F.relu(s11 + s12 + self.layer_2_a.bias.data)
+        q1 = self.layer_3(s1)
+
+        s2 = F.relu(self.layer_4(s))
+        self.layer_5_s(s2)
+        self.layer_5_a(a)
+        s21 = torch.mm(s2, self.layer_5_s.weight.data.t())
+        s22 = torch.mm(a, self.layer_5_a.weight.data.t())
+        s2 = F.relu(s21 + s22 + self.layer_5_a.bias.data)
+        q2 = self.layer_6(s2)
+        return q1, q2
+
+# td3 network
+class td3(object):
+    def __init__(self, state_dim, action_dim, max_action):
+        # Initialize the Actor network
+        self.actor = Actor(state_dim, action_dim).to(device)
+        self.actor_target = Actor(state_dim, action_dim).to(device)
+        self.actor_target.load_state_dict(self.actor.state_dict())
+        self.actor_optimizer = torch.optim.Adam(self.actor.parameters())
+
+        # Initialize the Critic networks
+        self.critic = Critic(state_dim, action_dim).to(device)
+        self.critic_target = Critic(state_dim, action_dim).to(device)
+        self.critic_target.load_state_dict(self.critic.state_dict())
+        self.critic_optimizer = torch.optim.Adam(self.critic.parameters())
+
+        self.max_action = max_action
+        self.writer = SummaryWriter(log_dir="./src/td3/runs/train/tensorboard")
+        # os.path.dirname(os.path.realpath(__file__)) + "/runs"
+        self.iter_count = 0
+
+    def get_action(self, state):
+        # Function to get the action from the actor
+        state = torch.Tensor(state.reshape(1, -1)).to(device)
+        return self.actor(state).cpu().data.numpy().flatten()
 ```
 <!-- <p align="center">
     <img width=100% src="https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/assets/101309710/484631fb-669f-44b5-8c6d-b9e7d1db250e">
